@@ -13,7 +13,7 @@ void loop() {
   // sliderblock(0,0,255,3); // RGB, size of block
   // breathing(0,0,255,15); // RGB, delay
   // sliderfullbounce(0,0,255); // RGB 
-  sliderblockbounce(0,255,255,3); // RGB , size of block
+  sliderblockbounce(150,0,255,3); // RGB , size of block
 }
 
 void setup() {
