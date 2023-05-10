@@ -9,7 +9,7 @@
 Adafruit_NeoPixel teststrip = Adafruit_NeoPixel(TESTNUMPIXELS, TESTPIN, NEO_GRB + NEO_KHZ800);
 
 // rabbit definition
-#define RABBITPIN            7 // datapin for the strip
+#define RABBITPIN            6 // datapin for the strip
 #define RABBITNUMPIXELS      100 // Number of LEDs
 Adafruit_NeoPixel rabbitstrip = Adafruit_NeoPixel(RABBITNUMPIXELS, RABBITPIN, NEO_GRB + NEO_KHZ800);
 
