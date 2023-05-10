@@ -40,16 +40,13 @@ Adafruit_NeoPixel ring5 = Adafruit_NeoPixel(RING5NUMPIXELS, RING5PIN, NEO_GRB + 
 
 // TO DO: sliderfullbounce / sliderblock / sliderblockbounce / breathing
 
-
-
-
 void loop() {
   // Running sequence. 
-  // sliderfull(0,0,255); // RGB 
+  sliderfull(0,0,255); // RGB 
   // sliderblock(0,0,255,3); // RGB, size of block
   // breathing(0,0,255,15); // RGB, delay
   // sliderfullbounce(0,0,255); // RGB 
-  sliderblockbounce(150,0,255,3); // RGB , size of block
+  // sliderblockbounce(150,0,255,3); // RGB , size of block
 }
 
 void setup() {
