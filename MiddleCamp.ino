@@ -38,7 +38,7 @@ Adafruit_NeoPixel ring4 = Adafruit_NeoPixel(RING4NUMPIXELS, RING4PIN, NEO_GRB + 
 #define RING5NUMPIXELS      13 // Number of LEDs
 Adafruit_NeoPixel ring5 = Adafruit_NeoPixel(RING5NUMPIXELS, RING5PIN, NEO_GRB + NEO_KHZ800);
 
-// TO DO: sliderfullbounce / sliderblock / sliderblockbounce / breathing
+// TO DO: sliderblock / sliderblockbounce / breathing
 
 void loop() {
   // Running sequence. 
@@ -148,13 +148,29 @@ void sliderfullbounce(int color1, int color2, int color3) {
   // Fills the strip and drains it afterwards, opposite direction
   blackout();
   for (int i = 0; i < 99; i = i + 1) {
-    teststrip.setPixelColor((i*teststrip.numPixels()/100), color1, color2, color3);
-    teststrip.show();
+    ring1.setPixelColor((i*ring1.numPixels()/100), color1, color2, color3);
+    ring2.setPixelColor((i*ring2.numPixels()/100), color1, color2, color3);
+    ring3.setPixelColor((i*ring3.numPixels()/100), color1, color2, color3);
+    ring4.setPixelColor((i*ring4.numPixels()/100), color1, color2, color3);
+    ring5.setPixelColor((i*ring5.numPixels()/100), color1, color2, color3);
+    ring1.show();
+    ring2.show();
+    ring3.show();
+    ring4.show();
+    ring5.show();
     delay(SLIDERDELAY);
   }
   for (int i = 100; i > 1; i = i - 1) {
-    teststrip.setPixelColor((i*teststrip.numPixels()/100), 0, 0, 0);
-    teststrip.show();
+    ring1.setPixelColor((i*ring1.numPixels()/100), 0, 0, 0);
+    ring2.setPixelColor((i*ring2.numPixels()/100), 0, 0, 0);
+    ring3.setPixelColor((i*ring3.numPixels()/100), 0, 0, 0);
+    ring4.setPixelColor((i*ring4.numPixels()/100), 0, 0, 0);
+    ring5.setPixelColor((i*ring5.numPixels()/100), 0, 0, 0);
+    ring1.show();
+    ring2.show();
+    ring3.show();
+    ring4.show();
+    ring5.show();
     delay(SLIDERDELAY);
   }
 }
